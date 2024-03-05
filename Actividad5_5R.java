@@ -30,5 +30,4 @@ public class Actividad5_5R {
     public static void mostrarSinLn(String texto){
         System.out.print("\t"+texto);
     }
-
 }
