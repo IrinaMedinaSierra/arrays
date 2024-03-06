@@ -32,7 +32,10 @@ public class InsertarOrdenadaFunciones {
                 mostrar(Arrays.toString(cesta));
                 menu();
             }
-
+            case 3->{
+                cesta=eliminar(cesta);
+                menu();
+            }
         }
 
     }
@@ -73,7 +76,8 @@ public class InsertarOrdenadaFunciones {
                 indice=i;
             }
         }
-        if (indice>cesta.length){
+        boolean existe=buscarProducto(cesta,productoElimnar);
+        if(!existe){
             mostrar("El producto que quieres borrar no existe en la Cesta");
         }else{
             cesta[indice]=cesta[cesta.length-1];
@@ -81,8 +85,6 @@ public class InsertarOrdenadaFunciones {
         }
         return cesta;
     }
-
-
 
     /***************************/
     public static void mostrar(String texto) {
