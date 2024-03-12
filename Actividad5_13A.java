@@ -10,10 +10,12 @@ import java.util.Scanner;
 
 public class Actividad5_13A {
     static Scanner sn=new Scanner(System.in);
+    static int contador=0;
     public static void main(String[] args) {
         int tabla[]=crearTabla();
         mostrar("Tabla Original\n"+Arrays.toString(tabla));
         mostrar("Tabla Desordenada\n"+Arrays.toString(desordenarT(tabla)));
+        mostrar("contador->" + contador);
     }
     //Método para Crear la tabla y devolver los datos.
     public static int[] crearTabla(){
@@ -42,6 +44,7 @@ public class Actividad5_13A {
             tabla[valor1]=tabla[valor2];
             tabla[valor2]=aux;
         }
+       contador++;
        int desordenada[]= Arrays.copyOf(tabla,tabla.length);
        return desordenada;
     }
